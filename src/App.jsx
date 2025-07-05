@@ -1,12 +1,25 @@
 import { useContext } from "react";
-import { GlobalContext } from "./context/GlobalContext"; // <-- CORRETTA IMPORTAZIONE
+import { GlobalContext } from "./context/GlobalContext";
+
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+//layout
+import Defaultlayout from "./layout/Defaultlayout";
+
+//pages
+import HomePage from "./pages/HomePage";
 
 export default function App() {
-  const { products, setProducts } = useContext(GlobalContext);
+  // const { products, setProducts } = useContext(GlobalContext);
 
-  console.log(products);
+  // console.log(products);
 
   return (
-    <div>App</div>
+    <BrowserRouter>
+      <Routes>
+        <Route element={<Defaultlayout />}>
+          <Route path="/" element={<HomePage />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }

@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
 
-// per redere il contesto discponibile in <App />
+// per rendere il contesto disponibile in <App />
 import GlobalProvider from './context/GlobalContext.jsx'
 
 createRoot(document.getElementById('root')).render(
