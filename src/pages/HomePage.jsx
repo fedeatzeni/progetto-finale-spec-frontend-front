@@ -5,8 +5,7 @@ import Card from "../components/Card";
 export default function HomePage() {
 
     const { products, setProducts } = useContext(GlobalContext);
-    console.log(products);
-    
+    // console.log(products);
 
     return (
         <>

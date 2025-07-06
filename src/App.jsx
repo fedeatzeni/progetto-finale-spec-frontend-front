@@ -7,6 +7,7 @@ import Defaultlayout from "./layout/Defaultlayout";
 
 //pages
 import HomePage from "./pages/HomePage";
+import DetailPage from "./pages/DetailPage";
 
 export default function App() {
   // const { products, setProducts } = useContext(GlobalContext);
@@ -18,6 +19,7 @@ export default function App() {
       <Routes>
         <Route element={<Defaultlayout />}>
           <Route path="/" element={<HomePage />} />
+          <Route path="/product/:id" element={<DetailPage />} />
         </Route>
       </Routes>
     </BrowserRouter>

@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+a {
+    color: black;
+    text-decoration: none;
+}
+
 /* header */
 header {
     background-color: #5cbec0;
@@ -21,14 +26,23 @@ header a {
 main {
     width: 70%;
     margin: 0 auto;
-    display:  flex;
+    display: flex;
     flex-wrap: wrap;
     gap: 20px;
 }
-main .card{
+
+main .card {
     flex-basis: 18%;
     border: 1px solid black;
     border-radius: 10px;
     padding: 10px 20px;
     margin-bottom: 20px;
+}
+
+.image-container {
+    max-width: 200px;
+}
+
+.image-container img {
+    width: 100%;
 }
