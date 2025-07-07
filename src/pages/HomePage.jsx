@@ -21,9 +21,12 @@ export default function HomePage() {
         else setSortBy(value)
     }
 
+    // category
+    const [selectedCategory, setSelectedCategory] = useState("");
+
     const filteredProducts = useMemo(() => {
         if (!Array.isArray(products)) return [];
-        
+
         let processedProducts = [...products];
 
         if (search !== "") {
@@ -46,9 +49,14 @@ export default function HomePage() {
             });
         }
 
+        if (selectedCategory !== "") {
+            processedProducts = processedProducts.filter((el) => el.category === selectedCategory);
+        }
+
+
         return processedProducts;
 
-    }, [products, search, sortBy, sortOrder]);
+    }, [products, search, sortBy, sortOrder, selectedCategory]);
 
     return (
         <>
@@ -61,6 +69,12 @@ export default function HomePage() {
                 <span className="sort">
                     <span onClick={() => handleSort("title")}>Nome</span>
                     <span onClick={() => handleSort("category")}>Categoria</span>
+                    <select value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)}>
+                        <option value="">Categoria</option>
+                        {products.map(el => {
+                            return <option key={el.id} value={el.category}>{el.category}</option>
+                        })}
+                    </select>
                 </span>
 
                 <main>
