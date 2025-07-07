@@ -23,9 +23,22 @@ header a {
 }
 
 /* main */
-main {
+
+.home-page {
     width: 70%;
     margin: 0 auto;
+}
+
+.home-page input{
+    margin-bottom: 20px;
+}
+
+.home-page .sort span{
+    cursor: pointer;
+    margin: 0px 10px;
+}
+
+main {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
@@ -66,4 +79,11 @@ main .card button {
 .compare-cards .reset {
     display: flex;
     justify-content: center;
+}
+
+.details-card {
+    max-width: 250px;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    overflow: auto;
 }
