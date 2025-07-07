@@ -1,12 +1,19 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 
+import { GlobalContext } from "../context/GlobalContext";
+
 const Card = React.memo((product) => {
+    const { fetchItem } = useContext(GlobalContext)
+
     return (
-        <Link to={`product/${product.id}`} className="card">
-            <div>{product.title}</div>
-            <div>{product.category}</div>
-        </Link>
+        <div className="card">
+            <Link to={`product/${product.id}`} >
+                <div>{product.title}</div>
+                <div>{product.category}</div>
+            </Link>
+            <button onClick={() => fetchItem(product.id)}>Compara</button>
+        </div>
     );
 });
 

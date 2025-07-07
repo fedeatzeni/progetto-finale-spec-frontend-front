@@ -1,6 +1,9 @@
 import { useContext } from "react";
 import { GlobalContext } from "../context/GlobalContext";
+
 import Card from "../components/Card";
+import CompareCards from "../components/CompareCards";
+
 
 export default function HomePage() {
 
@@ -10,7 +13,8 @@ export default function HomePage() {
     return (
         <>
             <div>
-                <h1>HomePage</h1>
+                {/* <h1>HomePage</h1> */}
+                <CompareCards />
                 <main>
                     {products && products.map((el) => (
                         <Card key={el.id} {...el} />

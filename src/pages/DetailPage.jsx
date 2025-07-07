@@ -1,5 +1,6 @@
-import { useEffect, useMemo, useState } from "react";
+import { useContext, useEffect, useMemo, useState } from "react";
 import { useParams } from "react-router-dom";
+import { GlobalContext } from "../context/GlobalContext";
 
 export default function DetailPage() {
 
@@ -9,6 +10,8 @@ export default function DetailPage() {
 	const url = import.meta.env.VITE_APP_URL_API;
 
 	const [productDetails, setProductDetails] = useState(null)
+
+	const { firstItem, secondItem, setFirstItem, setSecondItem } = useContext(GlobalContext)
 
 	async function fetchData(id) {
 		try {

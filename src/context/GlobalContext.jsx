@@ -6,10 +6,10 @@ import useProducts from "../hooks/useProducts";
 export const GlobalContext = createContext();
 
 export default function GlobalProvider({ children }) {
-  const { products, setProducts } = useProducts();
+  const { products, setProducts, fetchItem, firstItem, secondItem, setFirstItem, setSecondItem, resetItems } = useProducts();
 
   return (
-    <GlobalContext.Provider value={{ products, setProducts }}>
+    <GlobalContext.Provider value={{ products, setProducts, fetchItem, firstItem, secondItem, setFirstItem, setSecondItem, resetItems }}>
       {children}
     </GlobalContext.Provider>
   );
