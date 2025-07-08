@@ -37,8 +37,13 @@ export default function DetailPage() {
 					<div className="image-container">
 						<img src={productDetails.image} alt="" />
 					</div>
-					<div>{productDetails.title}</div>
-					<button onClick={() => handleFavorites(productDetails)}>Aggiungi ai preferiti</button>
+					<div className="details-card">
+						<div>{productDetails.title}</div>
+						<div>{productDetails.brand}</div>
+						<div>{productDetails.price + "€"}</div>
+
+						<button onClick={() => handleFavorites(productDetails)}>Aggiungi ai preferiti</button>
+					</div>
 				</div>
 			}
 		</>

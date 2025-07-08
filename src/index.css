@@ -29,11 +29,11 @@ header a {
     margin: 0 auto;
 }
 
-.home-page input{
+.home-page input {
     margin-bottom: 20px;
 }
 
-.home-page .sort span{
+.home-page .sort span {
     cursor: pointer;
     margin: 0px 10px;
     padding: 0 10px;
@@ -56,6 +56,7 @@ main .card {
 }
 
 main .card button {
+    margin-top: 20px;
     padding: 10px 20px;
 }
 
@@ -83,24 +84,39 @@ main .card button {
     overflow: auto;
 }
 
+.image-container {
+    max-width: 200px;
+}
+
 /* detail-page */
 
 .detail-page {
     width: 70%;
     margin: 0 auto;
+    margin-top: 20px;
+    display: flex;
+    gap: 200px;
 }
 
-.detail-page button{
+.detail-page * {
+    margin-bottom: 20px;
+}
+
+.detail-page button {
     padding: 10px 20px;
 }
 
+.detail-page .image-container {
+    max-width: 400px;
+}
 
-.image-container {
-    max-width: 200px;
+.detail-page .details-card {
+    margin-top: 50px;
 }
 
 .image-container img {
     width: 100%;
+    margin-top: 10px;
 }
 
 .favorites-list {
@@ -115,6 +131,6 @@ main .card button {
     margin-top: 20px;
 }
 
-.favorite-item button{
+.favorite-item button {
     max-height: 20px;
 }

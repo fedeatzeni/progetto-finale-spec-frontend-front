@@ -7,6 +7,8 @@ export default function DetailsCard({ item }) {
         <img src={item.image} alt={item.title} />
       </div>
       <div>{item.title}</div>
+      <div>{item.brand}</div>
+      <div>{item.price + "€"}</div>
     </div>
   );
 }
