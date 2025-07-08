@@ -59,14 +59,6 @@ main .card button {
     padding: 10px 20px;
 }
 
-.image-container {
-    max-width: 200px;
-}
-
-.image-container img {
-    width: 100%;
-}
-
 /* compare-cards */
 .compare-cards {
     width: 70%;
@@ -89,4 +81,40 @@ main .card button {
     padding: 10px 20px;
     margin-bottom: 20px;
     overflow: auto;
+}
+
+/* detail-page */
+
+.detail-page {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.detail-page button{
+    padding: 10px 20px;
+}
+
+
+.image-container {
+    max-width: 200px;
+}
+
+.image-container img {
+    width: 100%;
+}
+
+.favorites-list {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.favorite-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.favorite-item button{
+    max-height: 20px;
 }

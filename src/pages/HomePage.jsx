@@ -58,6 +58,11 @@ export default function HomePage() {
 
     }, [products, search, sortBy, sortOrder, selectedCategory]);
 
+    // controllo dei prodotti
+    if (!Array.isArray(products)) {
+        return <p>Caricamento prodotti...</p>;
+    }
+
     return (
         <>
             <div className="home-page">

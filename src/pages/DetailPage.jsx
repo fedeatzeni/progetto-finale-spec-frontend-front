@@ -11,8 +11,6 @@ export default function DetailPage() {
 
 	const [productDetails, setProductDetails] = useState(null)
 
-	const { firstItem, secondItem, setFirstItem, setSecondItem } = useContext(GlobalContext)
-
 	async function fetchData(id) {
 		try {
 			const res = await fetch(`${url}/products/${id}`)
@@ -28,16 +26,19 @@ export default function DetailPage() {
 		fetchData(id)
 	}, [])
 
-	console.log(productDetails);
+	// console.log(productDetails);
+
+	const { favorites, handleFavorites } = useContext(GlobalContext)
 
 	return (
 		<>
 			{productDetails &&
-				<div>
+				<div className="detail-page">
 					<div className="image-container">
 						<img src={productDetails.image} alt="" />
 					</div>
 					<div>{productDetails.title}</div>
+					<button onClick={() => handleFavorites(productDetails)}>Aggiungi ai preferiti</button>
 				</div>
 			}
 		</>

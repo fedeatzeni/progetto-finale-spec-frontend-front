@@ -36,5 +36,19 @@ export default function useProducts() {
         setSecondItem(null);
     }
 
-    return { products, setProducts, fetchItem, firstItem, secondItem, setFirstItem, setSecondItem, resetItems }
+    //favorites
+    const [favorites, setFavorites] = useState([])
+
+    const handleFavorites = (item) => {
+        const isFavorite = favorites.some((el) => el.id === item.id);
+
+        if (isFavorite) {
+            setFavorites(favorites.filter((el) => el.id !== item.id));
+        } else {
+            setFavorites([...favorites, item]);
+        }
+    };
+
+
+    return { products, setProducts, fetchItem, firstItem, secondItem, setFirstItem, setSecondItem, resetItems, favorites, handleFavorites }
 }
