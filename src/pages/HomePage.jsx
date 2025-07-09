@@ -85,9 +85,10 @@ export default function HomePage() {
                 <main>
 
                     {/* {cards} */}
-                    {filteredProducts && filteredProducts.map((el) => (
+                    {filteredProducts.length > 0 ? filteredProducts.map((el) => (
                         < Card key={el.id} {...el} />
-                    ))
+                    )) : 
+                        <p>Nessun prodotto trovato</p>
                     }
                 </main>
             </div>

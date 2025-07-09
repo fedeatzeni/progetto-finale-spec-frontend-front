@@ -7,7 +7,11 @@ export default function CompareCards() {
 
     const { firstItem, secondItem, resetItems } = useContext(GlobalContext)
     return (
+
         <div className="compare-cards">
+
+            {!firstItem && !secondItem && <p className="alert">Seleziona 2 oggetti da comparare</p>}
+
             <div className="cards">
                 <DetailsCard item={firstItem} />
                 <DetailsCard item={secondItem} />
