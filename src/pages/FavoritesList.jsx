@@ -4,6 +4,11 @@ import { GlobalContext } from "../context/GlobalContext";
 export default function FavoritesList() {
 
     const { favorites, handleFavorites } = useContext(GlobalContext);
+
+    if (!Array.isArray(favorites)) {
+        return <p>Caricamento prodotti...</p>;
+    }
+
     return (
         <div className="favorites-list">
             <h1>Lista dei Preferiti</h1>

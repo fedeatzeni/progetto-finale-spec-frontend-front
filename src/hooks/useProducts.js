@@ -36,19 +36,37 @@ export default function useProducts() {
         setSecondItem(null);
     }
 
-    //favorites
-    const [favorites, setFavorites] = useState([])
+    // const [favorites, setFavorites] = useState([])
+
+    // const handleFavorites = (item) => {
+    //     const isFavorite = favorites.some((el) => el.id === item.id);
+
+    //     if (isFavorite) {
+    //         setFavorites(favorites.filter((el) => el.id !== item.id));
+    //     } else {
+    //         setFavorites([...favorites, item]);
+    //     }
+    // };
+
+    //favorites local storage
+    const [favorites, setFavorites] = useState(() => {
+        const stored = localStorage.getItem("favorites");
+        return stored ? JSON.parse(stored) : [];
+    });
 
     const handleFavorites = (item) => {
         const isFavorite = favorites.some((el) => el.id === item.id);
+        let updatedFavorites;
 
         if (isFavorite) {
-            setFavorites(favorites.filter((el) => el.id !== item.id));
+            updatedFavorites = favorites.filter((el) => el.id !== item.id);
         } else {
-            setFavorites([...favorites, item]);
+            updatedFavorites = [...favorites, item];
         }
-    };
 
+        setFavorites(updatedFavorites);
+        localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
+    };
 
     return { products, setProducts, fetchItem, firstItem, secondItem, setFirstItem, setSecondItem, resetItems, favorites, handleFavorites }
 }
