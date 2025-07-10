@@ -41,6 +41,7 @@ export default function DetailPage() {
 						<div>{productDetails.title}</div>
 						<div>{productDetails.brand}</div>
 						<div>{productDetails.price + "€"}</div>
+						<div>{productDetails.category}</div>
 
 						<button onClick={() => handleFavorites(productDetails)}>Aggiungi ai preferiti</button>
 					</div>

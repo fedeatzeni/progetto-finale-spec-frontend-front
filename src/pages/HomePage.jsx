@@ -1,9 +1,19 @@
-import { useContext, useMemo, useState } from "react";
+import { useCallback, useContext, useMemo, useState } from "react";
 import { GlobalContext } from "../context/GlobalContext";
 
 import Card from "../components/Card";
 import CompareCards from "../components/CompareCards";
 
+// debounce
+function debounce(callback, delay) {
+    let timer;
+    return (value) => {
+        clearTimeout(timer);
+        timer = setTimeout(() => {
+            callback(value);
+        }, delay);
+    };
+}
 
 export default function HomePage() {
 
@@ -58,6 +68,9 @@ export default function HomePage() {
 
     }, [products, search, sortBy, sortOrder, selectedCategory]);
 
+    // debounce search
+    const debounceSearch = useCallback(debounce(setSearch, 500), [])
+
     // controllo dei prodotti
     if (!Array.isArray(products)) {
         return <p>Caricamento prodotti...</p>;
@@ -69,7 +82,7 @@ export default function HomePage() {
                 {/* <h1>HomePage</h1> */}
                 <CompareCards />
 
-                <input type="text" placeholder="Cerca..." value={search} onChange={(e) => setSearch(e.target.value)} />
+                <input type="text" placeholder="Cerca..." onChange={(e) => debounceSearch(e.target.value)} />
 
                 <span className="sort">
                     <span onClick={() => handleSort("title")}>Nome</span>
@@ -87,7 +100,7 @@ export default function HomePage() {
                     {/* {cards} */}
                     {filteredProducts.length > 0 ? filteredProducts.map((el) => (
                         < Card key={el.id} {...el} />
-                    )) : 
+                    )) :
                         <p>Nessun prodotto trovato</p>
                     }
                 </main>
