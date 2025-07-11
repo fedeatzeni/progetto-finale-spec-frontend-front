@@ -12,6 +12,7 @@ export default function DetailsCard({ item }) {
       <div>{item.brand}</div>
       <div>{item.price + "€"}</div>
       <div>{item.category}</div>
+      <div>{item.type}</div>
     </Link>
   );
 }

@@ -34,6 +34,14 @@ export default function HomePage() {
     // category
     const [selectedCategory, setSelectedCategory] = useState("");
 
+    const categoriesList = [];
+    products && products.forEach(el => {
+        if (!categoriesList.includes(el.category)) {
+            categoriesList.push(el.category);
+        }
+    });
+
+
     const filteredProducts = useMemo(() => {
         if (!Array.isArray(products)) return [];
 
@@ -89,9 +97,9 @@ export default function HomePage() {
                     <span onClick={() => handleSort("category")}>Categoria</span>
                     <select value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)}>
                         <option value="">Categoria</option>
-                        {products.map(el => {
-                            return <option key={el.id} value={el.category}>{el.category}</option>
-                        })}
+                        {categoriesList.map((categoria, index) => (
+                            <option key={index} value={categoria}>{categoria}</option>
+                        ))}
                     </select>
                 </span>
 

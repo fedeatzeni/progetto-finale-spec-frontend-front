@@ -15,7 +15,7 @@ export default function FavoritesList() {
             <h1>Lista dei Preferiti</h1>
             {favorites.length > 0 ? (
                 favorites.map((product) => (
-                    <div className="favorite-item">
+                    <div key={product.id} className="favorite-item">
                         <Link to={`/product/${product.id}`} key={product.id} >
                             <div className="image-container">
                                 <img src={product.image} alt={product.title} />

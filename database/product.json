@@ -1,0 +1,112 @@
+[
+  {
+    "title": "Yamaha P-145 B",
+    "category": "tastiere",
+    "type": "piano",
+    "price": 398,
+    "brand": "Yamaha",
+    "image": "https://static.strumenti.net/product/1500x1125/2023/07/05/00/yamaha-yamahap145black-9.jpg",
+    "id": 1,
+    "createdAt": "2025-07-05T10:10:51.975Z",
+    "updatedAt": "2025-07-05T10:10:51.975Z"
+  },
+  {
+    "title": "Fender Player II Strat RW Coral Red",
+    "category": "chitarre",
+    "type": "eletric-guitar",
+    "price": 888,
+    "brand": "Fender",
+    "image": "https://static.strumenti.net/product/1500x1125/2024/09/05/23/fender-fenderplayeriistratocasterrwcoralred-2.jpg",
+    "id": 2,
+    "createdAt": "2025-07-05T10:14:17.983Z",
+    "updatedAt": "2025-07-05T10:14:17.983Z"
+  },
+  {
+    "title": "Moog Subsequent 37",
+    "category": "tastiere",
+    "type": "analogue-synthesiser",
+    "price": 1835,
+    "brand": "Moog",
+    "image": "https://static.strumenti.net/product/1500x1125/2017/08/28/ae/moog-subsequent37-1.jpg",
+    "id": 3,
+    "createdAt": "2025-07-05T10:16:47.581Z",
+    "updatedAt": "2025-07-05T10:16:47.581Z"
+  },
+  {
+    "title": "Yamaha V5 SC44 Violin 4/4",
+    "category": "archi",
+    "type": "violin",
+    "price": 479,
+    "brand": "Yamaha",
+    "image": "https://static.strumenti.net/product/1500x1125/2016/11/28/89/yamaha-v5sc44-2.jpg",
+    "id": 4,
+    "createdAt": "2025-07-05T10:18:27.667Z",
+    "updatedAt": "2025-07-05T10:18:27.667Z"
+  },
+  {
+    "title": "TAMA ST50H5-BNS Stagestar 20\" Black Night Sparkle",
+    "category": "percussioni",
+    "type": "acustic-drums",
+    "price": 649,
+    "brand": "TAMA",
+    "image": "https://static.strumenti.net/product/1500x1125/2023/09/22/ae/tama-tamast50h5bnsstagestarblacknightsparkle-1.jpg",
+    "id": 5,
+    "createdAt": "2025-07-05T10:38:10.867Z",
+    "updatedAt": "2025-07-05T10:38:10.867Z"
+  },
+  {
+    "title": "YAMAHA YTR-4335 GII",
+    "category": "fiati",
+    "type": "trumpet",
+    "price": 809,
+    "brand": "YAMAHA",
+    "image": "https://static.strumenti.net/product/1500x1125/2017/03/29/51/yamaha-ytr4335gii-1.jpg",
+    "id": 6,
+    "createdAt": "2025-07-05T10:41:11.799Z",
+    "updatedAt": "2025-07-05T10:41:11.799Z"
+  },
+  {
+    "title": "YAMAHA YOB-241",
+    "category": "fiati",
+    "type": "oboe",
+    "price": 1799,
+    "brand": "YAMAHA",
+    "image": "https://static.strumenti.net/product/1500x1125/2017/05/12/79/yamaha-yob241.jpg",
+    "id": 7,
+    "createdAt": "2025-07-05T10:43:14.450Z",
+    "updatedAt": "2025-07-05T10:43:14.450Z"
+  },
+  {
+    "title": "GIBSON SG Standard Bass Ebony",
+    "category": "bassi",
+    "type": "eletric-bass",
+    "price": 1829,
+    "brand": "GIBSON",
+    "image": "https://static.strumenti.net/product/1500x1125/2020/05/12/e4/gibson-sgstandardbassebony-1.jpg",
+    "id": 8,
+    "createdAt": "2025-07-05T10:50:08.415Z",
+    "updatedAt": "2025-07-05T10:50:08.415Z"
+  },
+  {
+    "title": "YAMAHA YFL-212",
+    "category": "fiati",
+    "type": "transverse-flute",
+    "price": 665,
+    "brand": "YAMAHA",
+    "image": "https://static.strumenti.net/product/1500x1125/2016/11/02/53/yamaha-yfl212.jpg",
+    "id": 9,
+    "createdAt": "2025-07-05T10:51:34.185Z",
+    "updatedAt": "2025-07-05T10:51:34.185Z"
+  },
+  {
+    "title": "Lyon & Healy Prelude 40 Lever Harp EB",
+    "category": "archi",
+    "type": "harp",
+    "price": 6.333,
+    "brand": "Lyon & Healy",
+    "image": "https://thumbs.static-thomann.de/thumb/padthumb600x600/pics/bdb/_38/385973/14941010_800.jpg",
+    "id": 10,
+    "createdAt": "2025-07-05T11:01:14.645Z",
+    "updatedAt": "2025-07-05T11:01:14.645Z"
+  }
+]
